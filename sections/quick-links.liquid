@@ -12,9 +12,11 @@
 
     <div class="quick-links">
       {%- for block in section.blocks -%}
-        <a href="{{ block.settings.link }}" class="quick-links__link {% if section.settings.expand_items %}quick-links__link--grow{% endif %} heading" {{ block.shopify_attributes }}>
+        <a href="{{ block.settings.link }}" class="quick-links__link quick-links__link--hover {% if section.settings.expand_items %}quick-links__link--grow{% endif %} heading" {{ block.shopify_attributes }}>
           {{- block.settings.title | escape -}}
+          <img src="{{'right-arrow-yellow.svg' | asset_url }}" />
         </a>
+        
       {%- endfor -%}
     </div>
   </div>

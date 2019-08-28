@@ -1833,7 +1833,6 @@ img.lazyload[data-sizes="auto"] {
 .block-list__item {
   display: flex; /* Allow to stretch the content if different block items have different height */
 }
-
 /* Unfortunately IE11 does not like nested flex items, so for IE11, we revert to display: block */
 @include targetIE11() {
   .block-list__item {
@@ -4393,6 +4392,7 @@ img.lazyload[data-sizes="auto"] {
 
 .featured-collection__cta {
   margin-top: 8px;
+  color: #000 !important;
 }
 
 .featured-collection__image-wrapper {
@@ -9109,7 +9109,9 @@ $header-element-height: 44px;
   font-size: to-size(24px);
   color: $accent-color;
 }
-
+.price-color-custom {
+  color: #D02525;
+}
 .price--highlight {
   margin-right: 0.7em;
   color: $product-on-sale-accent;
@@ -9862,7 +9864,12 @@ $header-element-height: 44px;
   border-radius: 3px;
   overflow: hidden;
 }
-
+.promo-block--hover {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: transparent radial-gradient(closest-side at 50% 50%, #FFFF00 0%, #D9D908 100%) 0% 0% no-repeat padding-box;
+  }
+}
 .promo-block--small {
   min-height: 220px;
 }
@@ -12069,6 +12076,7 @@ $header-element-height: 44px;
 }
 
 .quick-links__link {
+  // position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12085,7 +12093,20 @@ $header-element-height: 44px;
   transition: color 0.2s ease-in-out;
 
   &:hover {
-    color: $accent-color;
+    color: $accent-color;   
+  }
+}
+.quick-links__link--hover {
+  transition: all 0.2s ease-in-out;
+  img {
+    margin-left: 18px;
+    visibility: hidden;
+  }
+  &:hover {
+    background-color: #292929;
+    img {
+      visibility: visible;
+    }
   }
 }
 

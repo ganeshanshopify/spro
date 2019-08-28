@@ -124,9 +124,9 @@
           {%- elsif product.price_varies -%}
             {%- capture price_min -%}<span data-money-convertible>{{ product.price_min | money_without_trailing_zeros }}</span>{%- endcapture -%}
             {%- capture price_max -%}<span data-money-convertible>{{ product.price_max | money_without_trailing_zeros }}</span>{%- endcapture -%}
-            <span class="price">{{ 'collection.product.from_price_html' | t: price_min: price_min, price_max: price_max }}</span>
+            <span class="price ">{{ 'collection.product.from_price_html' | t: price_min: price_min, price_max: price_max }}</span>
           {%- else -%}
-            <span class="price" data-money-convertible>{{ product.price | money_without_trailing_zeros }}</span>
+            <span class="price price-color-custom" data-money-convertible>{{ product.price | money_without_trailing_zeros }}</span>
           {%- endif -%}
         </div>
 
@@ -274,14 +274,15 @@
               <span class="product-item__inventory inventory inventory--high">{{ 'collection.product.in_stock_with_quantity_count' | t: count: all_inventory }}</span>
             {%- endif -%}
           {%- else -%}
-            <span class="product-item__inventory inventory inventory--high">{{ 'collection.product.in_stock' | t }}</span>
+            <!-- <span class="product-item__inventory inventory inventory--high">{{ 'collection.product.in_stock' | t }}, {{ collection.product.selected_or_first_available_variant.inventory_quantity }} </span>
+             -->
+             <span class="product-item__inventory inventory inventory--high">{{ 'collection.product.in_stock' | t }}, {{ product.variants.first.inventory_quantity }} Units</span>
           {%- endif -%}
         {%- else -%}
           <span class="product-item__inventory inventory">{{ 'collection.product.sold_out' | t }}</span>
         {%- endif -%}
       {%- endif -%}
     </div>
-
     {%- if template.name == 'collection' or template == 'search' or show_add_to_cart -%}
       {%- if section.settings.show_quick_view == 'list_grid' or section.settings.show_quick_buy == 'list_grid' or show_add_to_cart -%}
         {%- assign product_form_classes = 'product-item__action-list button-stack' -%}
