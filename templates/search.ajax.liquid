@@ -1,0 +1,76 @@
+{% layout none %}
+
+{%- if search.results_count > 0 -%}
+  {%- assign products_results = search.results | where: 'object_type', 'product' -%}
+
+  {%- if products_results.size > 0 -%}
+    <p class="search-bar__result-category">{{ 'header.search.products' | t }}</p>
+
+    <div class="search-bar__result-products" data-products-count="{{ search.results_count }}">
+      {%- assign clean_terms = search.terms | split: ' AND ' | last | remove_first: '*' -%}
+
+      {%- for item in products_results limit: 3 -%}
+        <a href="{{ item.url }}" class="search-bar__result-item">
+          <div class="search-bar__image-container">
+            <div class="aspect-ratio aspect-ratio--square">
+              <img src="{{ item.featured_image | img_url: '120x120' }}" alt="{{ item.featured_image.alt | escape }}">
+            </div>
+          </div>
+
+          <div class="search-bar__item-info">
+            <p class="search-bar__item-title">{{ item.title | highlight: clean_terms }}</p>
+            <span class="search-bar__item-price" data-money-convertible>{{ item.price | money_without_trailing_zeros }}</span>
+          </div>
+        </a>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+  {%- if search.types contains 'article' or search.types contains 'page' -%}
+    {%- capture search_results -%}
+      {%- assign accumulated_count = 0 -%}
+
+      {%- for item in search.results -%}
+        {%- if item.object_type != 'product' -%}
+          <li>
+            <a href="{{ item.url }}" class="search-bar__result-link">{{ item.title }}</a>
+          </li>
+
+          {%- assign accumulated_count = accumulated_count | plus: 1 -%}
+        {%- endif -%}
+
+        {%- if accumulated_count == 3 -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+
+    {%- if search_results != blank -%}
+      {%- if search.types contains 'article' and search.types contains 'page' -%}
+        <p class="search-bar__result-category">{{ 'header.search.blog_posts_and_pages' | t }}</p>
+      {%- elsif search.types contains 'article' -%}
+        <p class="search-bar__result-category">{{ 'header.search.blog_posts' | t }}</p>
+      {%- else -%}
+        <p class="search-bar__result-category">{{ 'header.search.pages' | t }}</p>
+      {%- endif -%}
+
+      <ul class="search-bar__result-linklist list--unstyled">
+        {{- search_results -}}
+      </ul>
+    {%- endif -%}
+  {%- endif -%}
+
+  <a class="search-bar__view-all" href="{{ routes.search_url }}?q={{ search.terms }}&type={{ search.types | join: ',' }}">
+    {%- if settings.search_mode == 'product' -%}
+      {{- 'header.search.view_products' | t -}}
+    {%- else -%}
+      {{- 'header.search.view_results' | t -}}
+    {%- endif -%}
+
+    {%- include 'icon' with 'arrow-right' -%}
+  </a>
+{%- else -%}
+  <div class="search-bar__empty-state">
+    <p class="heading h4">{{ 'header.search.no_results' | t }}</p>
+  </div>
+{%- endif -%}
