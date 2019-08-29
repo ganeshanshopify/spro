@@ -12,7 +12,7 @@
   
       <div class="quick-links quick-links--memo">
         {%- for block in section.blocks -%}
-          <a {% if block.settings.link %}href="{{ block.settings.link }}"{% endif %} class="quick-links__link quick-links__link--memo" {{ block.shopify_attributes }}>
+          <a {% if block.settings.link %} href="{{ block.settings.link }}"{% endif %} class="js-best-memo-video quick-links__link quick-links__link--memo" {{ block.shopify_attributes }}>
             {%- if block.settings.image -%}
               {%- assign max_height_mobile = 40 -%}
               {%- assign max_height_desktop = 70 -%}
@@ -37,10 +37,10 @@
               {%- endif -%}
   
               <div id="block-{{ block.id }}" class="quick-links__image-container">
-                <div class="quick-links__image-ie-fix">
+                <div class="quick-links__image-ie-fix quick-links__image-ie-fix--override-maxwidth">
                   <div class="aspect-ratio" style="padding-bottom: {{ 100.0 | divided_by: block.settings.image.aspect_ratio }}%">
-                    <img class="lazyload image--fade-in" data-src="{{ block.settings.image | img_url: '280x' }}" alt="{{ block.settings.image.alt | escape }}">
-  
+                    <img class="lazyload image--fade-in lazyload--image-border-radius-memo" data-src="{{ block.settings.image | img_url: '280x' }}" alt="{{ block.settings.image.alt | escape }}">
+                    
                     <noscript>
                       <img src="{{ block.settings.image | img_url: '280x' }}" alt="{{ block.settings.image.alt | escape }}">
                     </noscript>
@@ -64,6 +64,8 @@
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
               </div>
             {%- endif -%}
+            <p class="quick-links__image-container--text">{{ block.settings.memovideo_text }}</p>
+            <img class="quick-links--memo-play" src="{{'Group-120.svg' | asset_url  }}" />
           </a>
         {%- endfor -%}
   
@@ -129,6 +131,11 @@
             "type": "url",
             "id": "link",
             "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "memovideo_text",
+            "label": "Memo video title"
           }
         ]
       }

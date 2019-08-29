@@ -38,6 +38,7 @@
     {{ content_for_header }}
 
     <link rel="stylesheet" href="{{ 'theme.scss.css' | asset_url }}">
+    {{ 'magnific-popup.css' | asset_url | stylesheet_tag }}
 
     <script>
       // This allows to expose several variables to the global scope, to be used in scripts
@@ -105,6 +106,7 @@
     <script src="//cdn.polyfill.io/v3/polyfill.min.js?unknown=polyfill&features=fetch,Element.prototype.closest,Element.prototype.matches,Element.prototype.remove,Element.prototype.classList,Array.prototype.includes,Array.prototype.fill,String.prototype.includes,String.prototype.padStart,Object.assign,CustomEvent,Intl,URL,DOMTokenList,IntersectionObserver,IntersectionObserverEntry" defer></script>
     <script src="{{ 'libs.min.js' | asset_url }}" defer></script>
     <script src="{{ 'theme.min.js' | asset_url }}" defer></script>
+    <script src="{{ 'magnific-popup.min.js' | asset_url }}" defer></script>
     <script src="{{ 'custom.js' | asset_url }}" defer></script>
 
     {% include 'microdata-schema' %}
