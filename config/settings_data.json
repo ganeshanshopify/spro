@@ -13,7 +13,7 @@
     "primary_button_text_color": "#000000",
     "secondary_button_background": "#3a2a2f",
     "secondary_button_text_color": "#ffffff",
-    "header_background": "#231e20",
+    "header_background": "#000000",
     "header_text_color": "#ffffff",
     "header_light_text_color": "#e9e2dd",
     "product_on_sale_accent": "#ee0000",
@@ -43,7 +43,7 @@
     "show_inventory_quantity": true,
     "low_inventory_threshold": 1,
     "show_reviews_badge": false,
-    "cart_type": "drawer",
+    "cart_type": "page",
     "cart_empty_button_link": "shopify:\/\/collections\/all",
     "cart_show_free_shipping_threshold": true,
     "cart_free_shipping_threshold": "50",
@@ -90,30 +90,15 @@
               "image_2_text": "Tell your story",
               "image_2_link": ""
             }
-          },
-          "1565511305153": {
-            "type": "mega_menu",
-            "settings": {
-              "menu_item": "Logo Goods",
-              "image_1": "",
-              "image_1_heading": "Your image",
-              "image_1_text": "Tell your story",
-              "image_1_link": "",
-              "image_2": "",
-              "image_2_heading": "Your image",
-              "image_2_text": "Tell your story",
-              "image_2_link": ""
-            }
           }
         },
         "block_order": [
-          "1564807586707",
-          "1565511305153"
+          "1564807586707"
         ],
         "settings": {
           "enable_sticky_header": true,
-          "logo": "shopify:\/\/shop_images\/Logo.jpg",
-          "logo_max_width": 155,
+          "logo": "shopify:\/\/shop_images\/Logo_155x_2x_21323e51-a3de-44c6-905a-0b4f05445a5c.jpg",
+          "logo_max_width": 245,
           "mobile_logo_max_width": 100,
           "navigation_menu": "main-menu",
           "desktop_navigation_layout": "inline",
@@ -129,6 +114,47 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "1567094162663": {
+            "type": "text",
+            "settings": {
+              "title": "About our store",
+              "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>"
+            }
+          },
+          "1567094137374": {
+            "type": "links",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "1567094169199": {
+            "type": "links",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "1567094184364": {
+            "type": "links",
+            "settings": {
+              "menu": "footer"
+            }
+          },
+          "1567094194451": {
+            "type": "text",
+            "settings": {
+              "title": "About our store",
+              "content": "<p>Use this text area to tell your customers about your brand and vision. You can change it in the theme editor.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1567094162663",
+          "1567094137374",
+          "1567094169199",
+          "1567094184364",
+          "1567094194451"
+        ],
         "settings": {
           "show_social_media": true,
           "show_payment_icons": true,
@@ -239,60 +265,6 @@
           "carousel_effect": "fade",
           "autoplay": false,
           "cycle_speed": 5
-        }
-      },
-      "collection-list": {
-        "type": "collection-list",
-        "blocks": {
-          "collection-2": {
-            "type": "collection",
-            "settings": {
-              "collection": "bill-siemental",
-              "image": "shopify:\/\/shop_images\/34-T.jpg"
-            }
-          },
-          "collection-3": {
-            "type": "collection",
-            "settings": {
-              "collection": "",
-              "image": ""
-            }
-          },
-          "collection-4": {
-            "type": "collection",
-            "settings": {
-              "collection": "",
-              "image": ""
-            }
-          },
-          "collection-5": {
-            "type": "collection",
-            "settings": {
-              "collection": "",
-              "image": ""
-            }
-          },
-          "1565187322453": {
-            "type": "collection",
-            "settings": {
-              "collection": "",
-              "image": ""
-            }
-          }
-        },
-        "block_order": [
-          "collection-2",
-          "collection-3",
-          "collection-4",
-          "collection-5",
-          "1565187322453"
-        ],
-        "settings": {
-          "title": "Our Pros",
-          "link_title": "View all",
-          "link": "shopify:\/\/collections\/bill-siemantel",
-          "round_images": true,
-          "show_collection_title": true
         }
       },
       "collection-template": {
@@ -409,7 +381,7 @@
               "show_overlay": false,
               "overlay_opacity": 50,
               "stretch_image": false,
-              "background": "#f1da0e",
+              "background": "#e9e2dd",
               "text_color": "#000000",
               "title": "SPRO SUN MASK",
               "content": "The McRip 85 was designed by BASS elite series Ang...",
@@ -444,7 +416,7 @@
               "overlay_opacity": 50,
               "stretch_image": false,
               "background": "#e9e2dd",
-              "text_color": "#ffffff",
+              "text_color": "#000000",
               "title": "SPRO SUN MASK",
               "content": "The McRip 85 was designed by BASS elite series Ang...",
               "button_background": "#ffffff",
@@ -581,8 +553,8 @@
               "text_color": "#ffffff",
               "title": "SPRO Tournaments",
               "content": "The McRip was designed by BASS elite series Angler..",
-              "content_position": "middle_left",
-              "button_background": "#f1da0e",
+              "content_position": "middle_center",
+              "button_background": "#fcfbf9",
               "button_text_color": "#000000",
               "button_text": "Enter now",
               "link": "#"
@@ -602,6 +574,7 @@
       },
       "1565170587634": {
         "type": "video",
+        "disabled": true,
         "blocks": {
           "1565170587634-0": {
             "type": "video",
@@ -648,7 +621,7 @@
         "settings": {
           "title": "Instagram",
           "content": "<p>Follow us on Instagram and discover our new products!<\/p>",
-          "access_token": "",
+          "access_token": "2272513590.6a7999e.a9860ad613f04f95ade6fa59ad2a14cb",
           "button_text": "Follow us",
           "button_link": ""
         }
@@ -683,6 +656,299 @@
           "show_collection_overlay": true,
           "collection_overlay_opacity": 20
         }
+      },
+      "1567058271131": {
+        "type": "logo-list",
+        "disabled": true,
+        "blocks": {
+          "1567058271131-0": {
+            "type": "logo",
+            "settings": {
+              "image": "",
+              "link": ""
+            }
+          },
+          "1567058271131-1": {
+            "type": "logo",
+            "settings": {
+              "image": "",
+              "link": ""
+            }
+          },
+          "1567058271131-2": {
+            "type": "logo",
+            "settings": {
+              "image": "",
+              "link": ""
+            }
+          },
+          "1567058271131-3": {
+            "type": "logo",
+            "settings": {
+              "image": "",
+              "link": ""
+            }
+          },
+          "1567058271131-4": {
+            "type": "logo",
+            "settings": {
+              "image": "",
+              "link": ""
+            }
+          },
+          "1567058271131-5": {
+            "type": "logo",
+            "settings": {
+              "image": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1567058271131-0",
+          "1567058271131-1",
+          "1567058271131-2",
+          "1567058271131-3",
+          "1567058271131-4",
+          "1567058271131-5"
+        ],
+        "settings": {
+          "title": "Our Pros",
+          "link_title": "",
+          "link": ""
+        }
+      },
+      "1567089194219": {
+        "type": "logo-list-memories",
+        "blocks": {
+          "1567089194219-0": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/long-forest-path.jpg",
+              "link": "https:\/\/www.youtube.com\/watch?v=WwkZqhpE0E4",
+              "memovideo_text": "Chris BBZ1 Shad"
+            }
+          },
+          "1567089194219-1": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screenshot_2019-08-06_at_7.29.42_PM_2x_a6a9d85d-b7b0-4ced-a08b-0a739bbb70a3.png",
+              "link": "https:\/\/www.youtube.com\/watch?v=WwkZqhpE0E4",
+              "memovideo_text": "Chris BBZ1 Shad"
+            }
+          },
+          "1567089194219-2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screenshot_2019-08-06_at_7.29.42_PM_2x_a6a9d85d-b7b0-4ced-a08b-0a739bbb70a3.png",
+              "link": "https:\/\/www.youtube.com\/watch?v=WwkZqhpE0E4",
+              "memovideo_text": "Chris BBZ1 Shad"
+            }
+          },
+          "1567089194219-3": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screenshot_2019-08-06_at_7.29.42_PM_2x_a6a9d85d-b7b0-4ced-a08b-0a739bbb70a3.png",
+              "link": "https:\/\/www.youtube.com\/watch?v=WwkZqhpE0E4",
+              "memovideo_text": "Chris BBZ1 Shad"
+            }
+          },
+          "1567089194219-4": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screenshot_2019-08-06_at_7.29.42_PM_2x_a6a9d85d-b7b0-4ced-a08b-0a739bbb70a3.png",
+              "link": "https:\/\/www.youtube.com\/watch?v=WwkZqhpE0E4",
+              "memovideo_text": "Chris BBZ1 Shad"
+            }
+          },
+          "1567089194219-5": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screenshot_2019-08-06_at_7.29.42_PM_2x_a6a9d85d-b7b0-4ced-a08b-0a739bbb70a3.png",
+              "link": "https:\/\/www.youtube.com\/watch?v=WwkZqhpE0E4",
+              "memovideo_text": "Chris BBZ1 Shad"
+            }
+          }
+        },
+        "block_order": [
+          "1567089194219-0",
+          "1567089194219-1",
+          "1567089194219-2",
+          "1567089194219-3",
+          "1567089194219-4",
+          "1567089194219-5"
+        ],
+        "settings": {
+          "title": "Logo list Memo",
+          "link_title": "View All",
+          "link": "#"
+        }
+      },
+      "1567089224082": {
+        "type": "logo-list-pros",
+        "blocks": {
+          "1567089224082-0": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/34-T.jpg",
+              "link": "#",
+              "pros_title": "Bill Siemantel"
+            }
+          },
+          "1567089224082-1": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/34-T.jpg",
+              "link": "#",
+              "pros_title": "Bill Siemantel 2"
+            }
+          },
+          "1567089224082-2": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/34-T.jpg",
+              "link": "#",
+              "pros_title": "Bill Siemantel 3"
+            }
+          },
+          "1567089224082-3": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/34-T.jpg",
+              "link": "#",
+              "pros_title": "Bill Siemantel 4"
+            }
+          },
+          "1567089224082-4": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/34-T.jpg",
+              "link": "#",
+              "pros_title": "Bill Siemantel 5"
+            }
+          },
+          "1567089224082-5": {
+            "type": "logo",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/34-T.jpg",
+              "link": "#",
+              "pros_title": "Bill Siemantel 6"
+            }
+          }
+        },
+        "block_order": [
+          "1567089224082-0",
+          "1567089224082-1",
+          "1567089224082-2",
+          "1567089224082-3",
+          "1567089224082-4",
+          "1567089224082-5"
+        ],
+        "settings": {
+          "title": "Logo list",
+          "link_title": "View All",
+          "link": "#"
+        }
+      },
+      "page-contact-template": {
+        "type": "page-contact-template",
+        "settings": {
+          "form_heading": "Leave your message",
+          "show_store_info": true,
+          "store_heading": "Find us",
+          "store_image": "",
+          "store_info": "<p>TEL:&nbsp;&nbsp;&nbsp;<a href=\"tel:(770)%20919-1722\" title=\"tel:(770) 919-1722\">(770) 919-1722<\/a>&nbsp; |&nbsp; FAX:&nbsp;&nbsp;&nbsp;<a href=\"tel:(770)%20919-8141\" title=\"tel:(770) 919-8141\">(770) 919-8141<\/a> EMAIL:&nbsp;&nbsp;&nbsp;<a href=\"mailto:contact@spro.com\">CONTACT@SPRO.COM<\/a><\/p>"
+        }
+      },
+      "page-faq-template": {
+        "type": "page-faq-template",
+        "blocks": {
+          "1567095864972": {
+            "type": "question",
+            "settings": {
+              "title": "Can I change the skirts on a Bronzeye Frog and how do I do it?",
+              "answer": "<p>Yes, you can change out the legs on a Bronzeye Frog. Pull the old legs out. Take a small wire. Thread it through both openings where the old legs were. Lay your new material onto the wire that is already threaded through the legs. You should be able to get \"living rubber\" or spinnerbait or jig skirt material at any tackle store. Bend the wire with some pliers so it holds the the new material in place. Make sure the wire bend is very small and the the extra wire is bent in so that it will go back through the leg holes. Simply pull the wire back through the legs and the new material should flow right into place. It helps to coat the old and new material with some sort of lubricant to make it slide through the small holes. Fish attractant, Reel Magic or other line spray, or even water will help to make the material slide through. Just make sure to wash off the lubricant.<\/p>"
+            }
+          },
+          "1567095891078": {
+            "type": "question",
+            "settings": {
+              "title": "Q: What type of line and what type of rod and reel do you use when fishing the 6 or 8 inch SPRO BBZ1 Swimbaits?",
+              "answer": "<p>Bill uses his signature custom-designed 8-foot heavy action rod (produced by Lamiglas), a Shimano Calcutta 400 because of its line capacity and strength, and 25-pound Maxima monofilament.<\/p>"
+            }
+          },
+          "1567095911126": {
+            "type": "question",
+            "settings": {
+              "title": "Are there any prostaff positions available? How do I get on prostaff?",
+              "answer": "<p>This is one of the most frequently asked questions to all tackle manufactures. Presently, our prostaff is full, and we even have a waiting list. SPRO's prostaff consists of some of the world's most knowledgeable anglers. This prostaff allows SPRO to research, test, market and as a result of all of this offer our customers the finest fishing lures available. If you would like to send us a resume we will keep it on file.<\/p>"
+            }
+          },
+          "1567095924823": {
+            "type": "question",
+            "settings": {
+              "title": "How do I see the sizes of SPRO Terminal Tackle?",
+              "answer": "<p>The sizing is at the bottom of each item&rsquo;s order page<\/p>"
+            }
+          },
+          "1567095938281": {
+            "type": "question",
+            "settings": {
+              "title": "What Tackle does SPRO recommend for throwing SPRO Frogs?",
+              "answer": "<p>Rod: 7- 7.5 ft Fast Action Medium Heavy to Heavy Action<\/p>\n<p>Reel: 7:1 or Faster Bait Casting<\/p>\n<p>ReelLine: 50lb - 80lb Braided Line<\/p>"
+            }
+          },
+          "1567095974878": {
+            "type": "question",
+            "settings": {
+              "title": "What size hooks are in SPRO Bucktails?",
+              "answer": "<p>WeightHook Size<\/p>\n<p><strong>1\/4&nbsp; &nbsp;<\/strong><strong>2\/0<\/strong><\/p>\n<p><strong>3\/8&nbsp; &nbsp;<\/strong><strong>3\/0<\/strong><\/p>\n<p><strong>1\/2&nbsp; &nbsp;<\/strong><strong>4\/0<\/strong><\/p>\n<p><strong>3\/4&nbsp; &nbsp;<\/strong><strong>5\/0<\/strong><\/p>\n<p><strong>1&nbsp;<\/strong><strong>6\/0 HW<\/strong><\/p>\n<p><strong>1 1\/2<\/strong><strong>6\/0 HW<\/strong><\/p>\n<p><strong>2&nbsp; &nbsp;<\/strong><strong>7\/0 HW<\/strong><\/p>\n<p><strong>3&nbsp; &nbsp;<\/strong><strong>8\/0 HW<\/strong><\/p>\n<p><strong>4&nbsp; &nbsp;<\/strong><strong>8\/0 HW<\/strong><\/p>\n<p><strong>6&nbsp; &nbsp;<\/strong><strong>8\/0 HW<\/strong><\/p>\n<p><\/p>\n<p><strong>8&nbsp; &nbsp;<\/strong><strong>8\/0 HW<\/strong><\/p>"
+            }
+          },
+          "1567096321938": {
+            "type": "question",
+            "settings": {
+              "title": "We’d like SPRO to sponsor our event\/organization and are looking for donations of products\/money. Is this possible?",
+              "answer": "<p>While we are happy to send SPRO decals to any event, team, or club, it is against our policy to send free products or donate money. Please contact us if you would like us to send decals.<\/p>"
+            }
+          },
+          "1567096335713": {
+            "type": "question",
+            "settings": {
+              "title": "Where can I get SPRO logo goods?",
+              "answer": "<p>We sell some shirts, hats and large boat decals here on our website. If you&rsquo;re interested in smaller decals (car window size), we will send you some for free. Just send us a message asking for decals using the &ldquo;contact us&rdquo; button, and let us know your address.<\/p>"
+            }
+          },
+          "1567096353341": {
+            "type": "question",
+            "settings": {
+              "title": "Is there a warranty for your products?",
+              "answer": "<p>We stand by the quality of all of our products, but we also understand that sometimes defects do occur in production. We will replace any bait sent back to us as defective, and also send additional product to cover your cost of shipping. If you have any questions, please contact us.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1567095864972",
+          "1567095891078",
+          "1567095911126",
+          "1567095924823",
+          "1567095938281",
+          "1567095974878",
+          "1567096321938",
+          "1567096335713",
+          "1567096353341"
+        ],
+        "settings": {
+          "show_contact_info": false,
+          "contact_info_heading": "",
+          "contact_info_text": "",
+          "contact_1_icon": "bi-phone",
+          "contact_1_heading": "",
+          "contact_1_text": "",
+          "contact_2_icon": "bi-email",
+          "contact_2_heading": "",
+          "contact_2_text": ""
+        }
       }
     },
     "content_for_index": [
@@ -691,7 +957,9 @@
       "1555314133560",
       "1542984811767",
       "1565162611734",
-      "collection-list",
+      "1567089224082",
+      "1567089194219",
+      "1567058271131",
       "1565170587634",
       "1550833441117",
       "1565505964318",
