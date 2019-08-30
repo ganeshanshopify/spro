@@ -13714,7 +13714,12 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 .product-add-form {
-  display: none;
+  .inactive {
+    pointer-events: none;
+    backround: grey;
+  }
+  {% comment %} display: none; {% endcomment %}
+  
 }
 .shopify-payment-button {
   display: none;
