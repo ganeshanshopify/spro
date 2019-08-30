@@ -5590,7 +5590,11 @@ $header-element-height: 44px;
   vertical-align: middle;
   max-height: 130px;
 }
-
+@media screen and (min-width: 641px) {
+  .header__logo-image--max-width {
+    max-width: 146px !important;
+  }
+}
 .header__mobile-nav {
   display: inline-block;
   margin-right: 20px;
