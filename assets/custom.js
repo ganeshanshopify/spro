@@ -47,13 +47,21 @@
      $(".js-product-id").on("click", function showCartForm(params) {
         console.log($(".js-product-id:checked").length);
         if($(".js-product-id:checked").length > 0) {
-            $(".js-product-add-form").css("display", "block");
-
+            if($(".product-form__add-button").hasClass("inactive")) {
+                $(".product-form__add-button").removeClass("inactive");
+                $(".product-form__add-button").addClass("js-add-multiple-to-cart");
+            }
         }
         else {
-            $(".js-product-add-form").css("display", "none");
+            $(".product-form__add-button").addClass("inactive");
+            $(".product-form__add-button").removeClass("js-add-multiple-to-cart");
+            
         }
      })
+ })
+
+ $(".inactive").on("click", function(e) {
+    e.preventDefault();
  })
 
 
@@ -175,33 +183,35 @@ function addAllItemsToCart(itemArray, form) {
 }
 
 // Best memories magnific video starts here
-
-$('.js-best-memo-video').magnificPopup({
-type: 'iframe',
-
-iframe: {
-    patterns: {
-        dailymotion: {
+if($('.js-best-memo-video').length > 0) {
+    $('.js-best-memo-video').magnificPopup({
+        type: 'iframe',
         
-        index: 'dailymotion.com',
-        
-        id: function(url) {        
-            var m = url.match(/^.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/);
-            if (m !== null) {
-                if(m[4] !== undefined) {
-                    
-                    return m[4];
+        iframe: {
+            patterns: {
+                dailymotion: {
+                
+                index: 'dailymotion.com',
+                
+                id: function(url) {        
+                    var m = url.match(/^.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/);
+                    if (m !== null) {
+                        if(m[4] !== undefined) {
+                            
+                            return m[4];
+                        }
+                        return m[2];
+                    }
+                    return null;
+                },
+                
+                src: 'https://www.dailymotion.com/embed/video/%id%'
+                
                 }
-                return m[2];
             }
-            return null;
-        },
-        
-        src: 'https://www.dailymotion.com/embed/video/%id%'
-        
         }
-    }
+        
+    });
 }
 
-});
 // Best memories magnific video ends here
