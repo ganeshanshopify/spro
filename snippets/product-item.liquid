@@ -126,7 +126,7 @@
             {%- capture price_max -%}<span data-money-convertible>{{ product.price_max | money_without_trailing_zeros }}</span>{%- endcapture -%}
             <span class="price ">{{ 'collection.product.from_price_html' | t: price_min: price_min, price_max: price_max }}</span>
           {%- else -%}
-            <span class="price price-color-custom" data-money-convertible>{{ product.price | money_without_trailing_zeros }}</span>
+            <span class="price " data-money-convertible>{{ product.price | money_without_trailing_zeros }}</span>
           {%- endif -%}
         </div>
 

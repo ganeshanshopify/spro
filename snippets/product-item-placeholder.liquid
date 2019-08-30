@@ -42,10 +42,10 @@ This create a placeholder for product item, and is used exclusively on home page
       {%- capture price_list -%}
         <div class="product-item__price-list price-list">
           {%- if on_sale -%}
-            <span class="price price--highlight" data-money-convertible>{{ random_price | money_without_trailing_zeros }}</span>
+            <span class="price price--highlight price-color-custom" data-money-convertible>{{ random_price | money_without_trailing_zeros }}</span>
             <span class="price price--compare" data-money-convertible>{{ random_compare_at_price | money_without_trailing_zeros }}</span>
           {%- else -%}
-            <span class="price" data-money-convertible>{{ random_price | money_without_trailing_zeros }}</span>
+            <span class="price price-color-custom" data-money-convertible>{{ random_price | money_without_trailing_zeros }}</span>
           {%- endif -%}
         </div>
       {%- endcapture -%}
