@@ -19,11 +19,11 @@
 
               <div class="promo-block__inner">
                 {%- if block.settings.title != blank -%}
-                  <p class="promo-block__heading heading h3">{{ block.settings.title | escape }}</p>
+                  <p class="promo-block__heading heading h3 heading--helvetica-bold">{{ block.settings.title | escape }}</p>
                 {%- endif -%}
 
                 {%- if block.settings.title != blank -%}
-                  <p class="promo-block__content">{{ block.settings.content | escape | newline_to_br }}</p>
+                  <p class="promo-block__content heading--helvetica-regular">{{ block.settings.content | escape | newline_to_br }}</p>
                 {%- endif -%}
 
                 {%- if block.settings.button_text != blank -%}

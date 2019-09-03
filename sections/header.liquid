@@ -407,9 +407,9 @@
             {%- for link in navigation_menu.links -%}
               <li class="nav-bar__item">
                 {%- if link.links.size == 0 -%}
-                  <a href="{{ link.url }}" class="nav-bar__link link" role="menuitem">{{ link.title }}</a>
+                  <a href="{{ link.url }}" class="nav-bar__link link heading--helvetica-regular" role="menuitem">{{ link.title }}</a>
                 {%- else -%}
-                  <span tabindex="0" class="nav-bar__link link" role="menuitem" aria-expanded="false" aria-haspopup="true">
+                  <span tabindex="0" class="nav-bar__link link heading--helvetica-regular" role="menuitem" aria-expanded="false" aria-haspopup="true">
                     {{- link.title -}}
                     {%- include 'icon' with 'arrow-bottom' -%}
                     {%- include 'icon' with 'nav-triangle' -%}

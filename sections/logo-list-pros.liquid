@@ -2,7 +2,7 @@
     <div class="container">
       {%- if section.settings.title != blank -%}
         <header class="section__header">
-          <h2 class="section__title heading h3">{{ section.settings.title | escape }}</h2>
+          <h2 class="section__title heading h3 heading--impact">{{ section.settings.title | escape }}</h2>
   
           {%- if section.settings.link_title != blank and section.settings.link != blank -%}
             <a href="{{ section.settings.link }}" class="section__action-link link">{{ section.settings.link_title | escape }} {% include 'icon' with 'tail-right' %}</a>
@@ -65,7 +65,7 @@
               </div>
 
             {%- endif -%}
-            <p class="quick-links__pros-title">{{block.settings.pros_title}}
+            <p class="quick-links__pros-title heading--helvetica-regular ">{{block.settings.pros_title}}
                     <img class="quick-links__pros-title--image text-capitalize" src="{{'right-arrow-black.svg' | asset_url }}" />
                 </p>
           </a>

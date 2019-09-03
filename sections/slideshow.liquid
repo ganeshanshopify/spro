@@ -61,11 +61,11 @@
 
             {%- capture slide_content -%}
               {%- if block.settings.title != blank -%}
-                <h2 class="slideshow__title heading h1">{{ block.settings.title | escape }}</h2>
+                <h2 class="slideshow__title heading h1 heading--impact">{{ block.settings.title | escape }}</h2>
               {%- endif -%}
 
               {%- if block.settings.content != blank -%}
-                <p class="slideshow__content">{{ block.settings.content | escape | newline_to_br }}</p>
+                <p class="slideshow__content heading--helvetica-regular">{{ block.settings.content | escape | newline_to_br }}</p>
               {%- endif -%}
 
               {%- if block.settings.link != blank and block.settings.button_text != blank -%}

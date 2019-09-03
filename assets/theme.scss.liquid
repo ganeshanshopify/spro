@@ -5590,11 +5590,11 @@ $header-element-height: 44px;
   vertical-align: middle;
   max-height: 130px;
 }
-@media screen and (min-width: 641px) {
-  .header__logo-image--max-width {
-    max-width: 146px !important;
-  }
-}
+// @media screen and (min-width: 641px) {
+//   .header__logo-image--max-width {
+//     max-width: 146px !important;
+//   }
+// }
 .header__mobile-nav {
   display: inline-block;
   margin-right: 20px;
@@ -10026,7 +10026,41 @@ $header-element-height: 44px;
   font-style: normal;
   font-display: fallback;
 }
+// Custom Font-families
+@font-face {
+  font-family: "Impact" ;
+  src: url("{{'impact.ttf' | asset_url }}") format("opentype");
+}
+@font-face {
+  font-family: "HelveticaRegular" ;
+  src: url("{{'Helvetica-reg.ttf' | asset_url }}") format("opentype");
+}
+@font-face {
+  font-family: "HelveticaBold" ;
+  src: url("{{'Helvetica-reg.ttf' | asset_url }}") format("opentype");
+}
+// Font-size mixins starts here
+// @mixin font-size($size) {
+//   font-size: $size + px;
+//   line-height: $size + 10 + px;
+// }
+// Font-size mixins ends here
 
+// Font-family mixins starts here
+@mixin font-family($fam) {
+  @if $fam == h-regular {
+    font-family: 'HelveticaRegular';
+    {% comment %} font-weight: 400; {% endcomment %}
+  } @else if $fam == h-bold {
+    font-family: 'HelveticaBold'; 
+    {% comment %} font-weight: 700; {% endcomment %}
+  }
+  @else if $fam == i-regular {
+    font-family: 'Impact';
+    {% comment %} font-weight: 400; {% endcomment %}
+  } 
+}
+// Font-family mixins ends here
 .spr-starrating.spr-starrating,
 .spr-starratings.spr-starratings {
   position: relative;
@@ -13730,3 +13764,16 @@ input[type=number]::-webkit-outer-spin-button {
 .product-form__payment-container {
   margin-top: 40px;
 }
+// Changing font-families starts here
+.heading--impact {
+  @include font-family('i-regular');
+}
+.heading--helvetica-regular {
+  @include font-family('h-regular');
+}
+.heading--helvetica-bold {
+  @include font-family ('h-bold')
+}
+// .heading--impacts {
+//   @include font-family ('i-regular');
+// }

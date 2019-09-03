@@ -1,11 +1,11 @@
 <section class="section section--text-centered" data-section-id="{{ section.id }}" data-section-type="newsletter">
   <div class="container container--extra-narrow">
     {%- if section.settings.title != blank -%}
-      <h2 class="heading h3">{{ section.settings.title | escape }}</h2>
+      <h2 class="heading h3 heading--impact">{{ section.settings.title | escape }}</h2>
     {%- endif -%}
 
     {%- if section.settings.content != blank -%}
-      <div class="rte">
+      <div class="rte heading--helvetica-regular">
         {{ section.settings.content }}
       </div>
     {%- endif -%}

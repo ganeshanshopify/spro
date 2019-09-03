@@ -2,7 +2,7 @@
     <div class="container">
       {%- if section.settings.title != blank -%}
         <header class="section__header">
-          <h2 class="section__title heading h3">{{ section.settings.title | escape }}</h2>
+          <h2 class="section__title heading h3 heading--impact">{{ section.settings.title | escape }}</h2>
   
           {%- if section.settings.link_title != blank and section.settings.link != blank -%}
             <a href="{{ section.settings.link }}" class="section__action-link link">{{ section.settings.link_title | escape }} {% include 'icon' with 'tail-right' %}</a>
@@ -64,7 +64,7 @@
                 {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
               </div>
             {%- endif -%}
-            <p class="quick-links__image-container--text">{{ block.settings.memovideo_text }}</p>
+            <p class="quick-links__image-container--text heading--helvetica-regular ">{{ block.settings.memovideo_text }}</p>
             <img class="quick-links--memo-play" src="{{'Group-120.svg' | asset_url  }}" />
           </a>
         {%- endfor -%}
