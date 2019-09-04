@@ -5826,7 +5826,8 @@ $header-element-height: 44px;
   font-weight: $text-font-bolder-weight;
   text-align: center;
   background: $accent-color;
-  color: $secondary-background;
+  // color: $secondary-background;
+  color: #000 !important;
   border-radius: 1.75em;
   transition: -webkit-transform 0.35s ease-in-out;
   transition: transform 0.35s ease-in-out;
@@ -10041,15 +10042,16 @@ $header-element-height: 44px;
 // Custom Font-families
 @font-face {
   font-family: "Impact" ;
-  src: url("{{'impact.ttf' | asset_url }}") format("opentype");
+  src: url("https://cdn.shopify.com/s/files/1/0114/8098/9758/files/impact.ttf?1247") format("truetype");
 }
 @font-face {
   font-family: "HelveticaRegular" ;
-  src: url("{{'Helvetica-3.ttf' | asset_url }}") format("opentype");
+  src: url("https://cdn.shopify.com/s/files/1/0114/8098/9758/files/Helvetica-3.ttf?1246") format("truetype");
 }
 @font-face {
   font-family: "HelveticaBold" ;
-  src: url("{{'Helvetica-3.ttf' | asset_url }}") format("opentype");
+  src: url("https://cdn.shopify.com/s/files/1/0114/8098/9758/files/Helvetica-3.ttf?1246") format("truetype");
+  font-weight: 700;
 }
 // Font-size mixins starts here
 @mixin font-size($size) {
@@ -10061,11 +10063,11 @@ $header-element-height: 44px;
 // Font-family mixins starts here
 @mixin font-family($fam) {
   @if $fam == h-regular {
-    font-family: 'HelveticaRegular';
+    font-family: 'Helvetica';
     {% comment %} font-weight: 400; {% endcomment %}
   } @else if $fam == h-bold {
-    font-family: 'HelveticaBold'; 
-    {% comment %} font-weight: 700; {% endcomment %}
+    font-family: 'Helvetica'; 
+    font-weight: 700; 
   }
   @else if $fam == i-regular {
     font-family: 'Impact';
@@ -10728,13 +10730,15 @@ $header-element-height: 44px;
 
 .section__title {
   margin-bottom: 0;
+  font-size: 21px !important;
 }
 
 .section__action-link {
   margin-left: 20px;
   flex-shrink: 0;
   font-weight: $text-font-bolder-weight;
-  color: $accent-color;
+  // color: $accent-color;
+  color: #000 !important;
 
   svg {
     display: none;
@@ -12179,7 +12183,7 @@ $header-element-height: 44px;
 }
 .quick-links__link--memo {
   box-shadow: unset;
-  padding: 0px 20px 10px 10px;
+  padding: 20px 10px !important;
   position: relative;
 }
 .lazyload--image-border-radius-memo {
@@ -12190,6 +12194,7 @@ $header-element-height: 44px;
   position: absolute;
   bottom: 83px;
   left: 45px;
+  @include font-size(14);
   // transform: translate(-50%, -50%);
 }
 .quick-links--memo-play {
@@ -13819,4 +13824,68 @@ input[type=number]::-webkit-outer-spin-button {
 .pros-profile__wrapper--image {
   width: 100vw;
   object-fit: cover;
+}
+.slideshow__title--font {
+  @include font-size(52);
+}
+.slideshow__content--font {
+  @include font-size(16);
+}
+.quick-links__link--font {
+  @include font-size(16);
+}
+.promo-block__heading--font {
+  @include font-size(21);
+}
+.promo-block__content--font {
+  @include font-size(14);
+}
+.product-item__vendor--font {
+  @include font-size(12);
+}
+.product-item__subvendor--font {
+  @include font-size(14);
+}
+.featured-collection__title--font {
+  @include font-size(21);
+}
+.featured-collection__text {
+  @include font-size(15);
+}
+.rte--font {
+  @include font-size(15);
+}
+.newsletter-heading-font {
+  @include font-size(21);
+}
+.nav-bar__link--font {
+  @include font-size(13);
+}
+.pros-list-section-padding {
+  padding: 40px 0;
+}
+.product-item--bg-color {
+  background-color: #fff !important;
+}
+.title-uppercase {
+  text-transform: uppercase;
+} 
+.price--color {
+  color: #000 !important;
+  font-weight: 700;
+}
+.section--bg-color {
+  background-color: #F2F2F2;
+  @include at('phone') {
+    padding: 30px !important;
+    margin: 20px !important;
+  }
+  @include at('tablet') {
+    padding: 30px !important;
+    margin: 40px !important;
+  }
+  @include at('tablet-and-up') {
+      padding: 40px !important;
+      margin: 60px 40px !important;
+  }
 }

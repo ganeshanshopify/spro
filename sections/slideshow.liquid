@@ -9,7 +9,7 @@
 {%- endcapture -%}
 
 <section data-section-id="{{ section.id }}" data-section-type="slideshow" data-section-settings='{{ section_settings }}'>
-  <div {% unless section.settings.edge_to_edge %}class="container container--flush"{% endunless %}>
+  <div {% unless section.settings.edge_to_edge %}class="container container--flush slideshow--spro"{% endunless %}>
     <div class="slideshow slideshow--{{ section.settings.section_size | replace: '_', '-' }} {% if section.settings.edge_to_edge %}slideshow--edge2edge{% endif %}" style="color: {{ section.blocks.first.settings.text_color }}">
       {%- for block in section.blocks -%}
         {%- if block.settings.mobile_image -%}
@@ -61,11 +61,11 @@
 
             {%- capture slide_content -%}
               {%- if block.settings.title != blank -%}
-                <h2 class="slideshow__title heading h1 heading--impact">{{ block.settings.title | escape }}</h2>
+                <h2 class="slideshow__title slideshow__title--font heading h1 heading--impact">{{ block.settings.title | escape }}</h2>
               {%- endif -%}
 
               {%- if block.settings.content != blank -%}
-                <p class="slideshow__content heading--helvetica-regular">{{ block.settings.content | escape | newline_to_br }}</p>
+                <p class="slideshow__content slideshow__content--font heading--helvetica-regular">{{ block.settings.content | escape | newline_to_br }}</p>
               {%- endif -%}
 
               {%- if block.settings.link != blank and block.settings.button_text != blank -%}

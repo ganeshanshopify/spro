@@ -176,32 +176,51 @@ function addAllItemsToCart(itemArray, form) {
 
 // Best memories magnific video starts here
 
-$('.js-best-memo-video').magnificPopup({
-type: 'iframe',
+// $('.js-best-memo-video').magnificPopup({
+// type: 'iframe',
 
-iframe: {
-    patterns: {
-        dailymotion: {
+// iframe: {
+//     patterns: {
+//         dailymotion: {
         
-        index: 'dailymotion.com',
+//         index: 'dailymotion.com',
         
-        id: function(url) {        
-            var m = url.match(/^.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/);
-            if (m !== null) {
-                if(m[4] !== undefined) {
+//         id: function(url) {        
+//             var m = url.match(/^.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/);
+//             if (m !== null) {
+//                 if(m[4] !== undefined) {
                     
-                    return m[4];
-                }
-                return m[2];
-            }
-            return null;
-        },
+//                     return m[4];
+//                 }
+//                 return m[2];
+//             }
+//             return null;
+//         },
         
-        src: 'https://www.dailymotion.com/embed/video/%id%'
+//         src: 'https://www.dailymotion.com/embed/video/%id%'
         
-        }
-    }
-}
+//         }
+//     }
+// }
 
-});
+// });
 // Best memories magnific video ends here
+
+
+
+// var $carousel = $('.slideshow--spro');
+// var hasMultipleCells = $carousel.find('.slideshow__slide').length > 1;
+// init Flickity if mulitple cells
+// if ( hasMultipleCells ) {
+//   $carousel.flickity({
+//     // pageDots: true
+//   });
+// }
+
+$(document).ready(function() {
+    if ($('#shopify-section-1565162611734 .flickity-page-dots').find('li').length < 2) {
+        $('#shopify-section-1565162611734 .dot').css({"visibility" : "hidden"});
+        // console.log($('#shopify-section-1565162611734 .flickity-page-dots').find('li').length);
+        // console.log('true');
+    }
+}) ;

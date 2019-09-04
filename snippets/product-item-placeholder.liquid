@@ -52,7 +52,7 @@ This create a placeholder for product item, and is used exclusively on home page
 
       {%- capture vendor -%}
         {%- if settings.show_vendor -%}
-          <a class="product-item__vendor link heading--helvetica-regular" href="#">{{ 'home_page.onboarding.vendor_title' | t }}</a>
+          <a class="product-item__vendor product-item__vendor--font link heading--helvetica-regular" href="#">{{ 'home_page.onboarding.vendor_title' | t }}</a>
         {%- endif -%}
       {%- endcapture -%}
 
@@ -65,7 +65,7 @@ This create a placeholder for product item, and is used exclusively on home page
       {%- endif -%}
 
       <h2 class="product-item__title text--strong">
-        <a href="#" class="link heading--helvetica-bold ">{{ 'home_page.onboarding.product_title' | t }}</a>
+        <a href="#" class="link heading--helvetica-bold product-item__subvendor--font">{{ 'home_page.onboarding.product_title' | t }}</a>
       </h2>
 
       {%- if settings.product_price_position == 'before_title' -%}
