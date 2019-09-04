@@ -13803,27 +13803,58 @@ input[type=number]::-webkit-outer-spin-button {
 .pros-profile-content {
   @include font-family('h-regular');
   @include font-size(20);
-  padding-top: 20px;
+  padding-bottom: 30px;
+  p {
+    @include font-family('h-regular');
+    @include font-size(20);
+  }
+}
+.pros-profile--heading {
+  @include font-size(40);
+  margin-bottom: 20px !important;
+}
+.pros-profile__tags-wrapper {
+  padding-bottom: 76px
 }
 .pros-profile-tags {
-    color: #000;
-    box-shadow: 0px 3px 6px #00000029;
-    @include font-size(15);
-    @include font-family('h-bold');
-    padding: 14px 20px 13px 20px;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0px 3px 6px #00000029;
+  @include font-size(15);
+  @include font-family('h-bold');
+  padding: 14px 20px 13px 20px;
+  margin-right: 10px;
 }
 .pros-profile-image-section-disp-flex {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
+.pros-profile__title {
+  display: inline-block;
+  color: #9A9A9A;
+  @include font-size(15);
+  @include font-family('h-regular');
+}
 .pros-profile__fb-logo-padding {
   padding-left: 10px;
 }
-.pros-profile__wrapper {}
+.pros-profile {
+  padding-bottom: 40px;
+}
+.pros-profile--section-bg {
+  background-color: #F0F2F4;
+}
+.pros-profile__wrapper {
+  padding-top: 35px;
+}
 .pros-profile__wrapper--image {
   width: 100vw;
   object-fit: cover;
+}
+.pros-profile__fb-logo-wrapper {
+  padding: 28px 10px 0 20px;
+  background-color: #fff;
 }
 .slideshow__title--font {
   @include font-size(52);
@@ -13888,4 +13919,7 @@ input[type=number]::-webkit-outer-spin-button {
       padding: 40px !important;
       margin: 60px 40px !important;
   }
+}
+.pros-list-section--heading-font {
+  @include font-size(21);
 }
