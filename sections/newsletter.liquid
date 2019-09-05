@@ -25,11 +25,11 @@
 
           <div class="form__input-row">
             <div class="form__input-wrapper form__input-wrapper--labelled">
-              <input type="email" id="newsletter[contact][email]" name="contact[email]" class="form__field form__field--text" required>
+              <input type="email" id="newsletter[contact][email]" name="contact[email]" class="form__field form__field--focus form__field--text" required>
               <label for="newsletter[contact][email]" class="form__floating-label">{{ 'home_page.newsletter.input' | t }}</label>
             </div>
 
-            <button type="submit" class="form__submit button button--primary">{{ 'home_page.newsletter.submit' | t }}</button>
+            <button type="submit" class="form__submit button button--primary button--primary--hover ">{{ 'home_page.newsletter.submit' | t }}</button>
           </div>
         {%- endif -%}
       {%- endform -%}

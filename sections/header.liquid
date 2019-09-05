@@ -288,12 +288,12 @@
                             </header>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-                              <input type="email" id="login-customer[email]" class="form__field form__field--text" name="customer[email]" required="required">
+                              <input type="email" id="login-customer[email]" class="form__field form__field--text form__field--focus" name="customer[email]" required="required">
                               <label for="login-customer[email]" class="form__floating-label">{{ 'customer.login.email' | t }}</label>
                             </div>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-                              <input type="password" id="login-customer[password]" class="form__field form__field--text" name="customer[password]" required="required" autocomplete="current-password">
+                              <input type="password" id="login-customer[password]" class="form__field form__field--text form__field--focus" name="customer[password]" required="required" autocomplete="current-password">
                               <label for="login-customer[password]" class="form__floating-label">{{ 'customer.login.password' | t }}</label>
                             </div>
 
@@ -301,8 +301,8 @@
                           {%- endform -%}
 
                           <div class="popover__secondary-action">
-                            <p>{{ 'customer.login.new_customer' | t }} <button data-action="show-popover-panel" aria-controls="header-register-panel" class="link link--accented">{{ 'customer.login.create_your_account' | t }}</button></p>
-                            <p>{{ 'customer.login.lost_password' | t }} <button data-action="show-popover-panel" aria-controls="header-recover-panel" class="link link--accented">{{ 'customer.login.recover_password' | t }}</button></p>
+                            <p>{{ 'customer.login.new_customer' | t }} <button data-action="show-popover-panel" aria-controls="header-register-panel" class="link link--accented link--color-login">{{ 'customer.login.create_your_account' | t }}</button></p>
+                            <p>{{ 'customer.login.lost_password' | t }} <button data-action="show-popover-panel" aria-controls="header-recover-panel" class="link link--accented link--color-login">{{ 'customer.login.recover_password' | t }}</button></p>
                           </div>
                         </div>
                       </div>
@@ -317,7 +317,7 @@
                             </header>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-                              <input type="email" id="recover-customer[recover_email]" class="form__field form__field--text" name="email" required="required">
+                              <input type="email" id="recover-customer[recover_email]" class="form__field form__field--text form__field--focus" name="email" required="required">
                               <label for="recover-customer[recover_email]" class="form__floating-label">{{ 'customer.recover_password.email' | t }}</label>
                             </div>
 
@@ -325,7 +325,7 @@
                           {%- endform -%}
 
                           <div class="popover__secondary-action">
-                            <p>{{ 'customer.recover_password.remembered_your_password' | t }} <button data-action="show-popover-panel" aria-controls="header-login-panel" class="link link--accented">{{ 'customer.recover_password.back_to_login' | t }}</button></p>
+                            <p>{{ 'customer.recover_password.remembered_your_password' | t }} <button data-action="show-popover-panel" aria-controls="header-login-panel" class="link link--accented link--color-login">{{ 'customer.recover_password.back_to_login' | t }}</button></p>
                           </div>
                         </div>
                       </div>
@@ -340,22 +340,22 @@
                             </header>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-                              <input type="text" id="register-customer[first_name]" class="form__field form__field--text" name="customer[first_name]" required="required">
+                              <input type="text" id="register-customer[first_name]" class="form__field form__field--text form__field--focus" name="customer[first_name]" required="required">
                               <label for="register-customer[first_name]" class="form__floating-label">{{ 'customer.register.first_name' | t }}</label>
                             </div>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-                              <input type="text" id="register-customer[last_name]" class="form__field form__field--text" name="customer[last_name]" required="required">
+                              <input type="text" id="register-customer[last_name]" class="form__field form__field--text form__field--focus" name="customer[last_name]" required="required">
                               <label for="register-customer[last_name]" class="form__floating-label">{{ 'customer.register.last_name' | t }}</label>
                             </div>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-                              <input type="email" id="register-customer[email]" class="form__field form__field--text" name="customer[email]" required="required">
+                              <input type="email" id="register-customer[email]" class="form__field form__field--text form__field--focus" name="customer[email]" required="required">
                               <label for="register-customer[email]" class="form__floating-label">{{ 'customer.register.email' | t }}</label>
                             </div>
 
                             <div class="form__input-wrapper form__input-wrapper--labelled">
-                              <input type="password" id="register-customer[password]" class="form__field form__field--text" name="customer[password]" required="required" autocomplete="new-password">
+                              <input type="password" id="register-customer[password]" class="form__field form__field--text form__field--focus" name="customer[password]" required="required" autocomplete="new-password">
                               <label for="register-customer[password]" class="form__floating-label">{{ 'customer.register.password' | t }}</label>
                             </div>
 
@@ -363,7 +363,7 @@
                           {%- endform -%}
 
                           <div class="popover__secondary-action">
-                            <p>{{ 'customer.register.already_have_account' | t }} <button data-action="show-popover-panel" aria-controls="header-login-panel" class="link link--accented">{{ 'customer.register.login' | t }}</button></p>
+                            <p>{{ 'customer.register.already_have_account' | t }} <button data-action="show-popover-panel" aria-controls="header-login-panel" class="link link--accented link--color-login">{{ 'customer.register.login' | t }}</button></p>
                           </div>
                         </div>
                       </div>
