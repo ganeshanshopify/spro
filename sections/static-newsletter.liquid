@@ -1,12 +1,12 @@
 {%- if section.settings.show_section -%}
-  <section class="section section--isolated section--tight section--text-centered" data-section-id="{{ section.id }}" data-section-type="newsletter">
+  <section class="section section--newsletter-bg section--isolated section--tight section--text-centered" data-section-id="{{ section.id }}" data-section-type="newsletter">
     <div class="container container--giga-narrow">
       {%- if section.settings.title != blank -%}
-        <h2 class="heading h3">{{ section.settings.title | escape }}</h2>
+        <h2 class="heading h3 section__heading">{{ section.settings.title | escape }}</h2>
       {%- endif -%}
 
       {%- if section.settings.content != blank -%}
-        <div class="rte">
+        <div class="rte rte--text">
           {{ section.settings.content }}
         </div>
       {%- endif -%}
@@ -36,7 +36,7 @@
         {%- endform -%}
 
         {%- if section.settings.subtext != blank -%}
-          <p class="newsletter__text">{{ section.settings.subtext | escape }}</p>
+          <p class="newsletter__text newsletter__text--color">{{ section.settings.subtext | escape }}</p>
         {%- endif -%}
       </div>
     </div>

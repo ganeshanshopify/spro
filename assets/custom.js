@@ -230,3 +230,32 @@ if($('.js-best-memo-video').length > 0) {
 }
 
 // Best memories magnific video ends here
+
+//rahul
+$(document).ready(function() {
+    if ($('#shopify-section-1565162611734 .flickity-page-dots').find('li').length < 2) {
+        $('#shopify-section-1565162611734 .dot').css({"visibility" : "hidden"});
+        // console.log($('#shopify-section-1565162611734 .flickity-page-dots').find('li').length);
+        // console.log('true');
+    }
+    // the spro photo and video gallery starts here
+    $('.js-photo-gallery').addClass("display-none");
+    $(".js-spro-gallery-tab--video").addClass("spro-gallery-tab-links");
+    $('.js-video-gallery').addClass("display-block");
+    $(".js-spro-gallery-tab--video").click(function(){
+        $(".js-spro-gallery-tab--photo").removeClass("spro-gallery-tab-links");
+        $(".js-spro-gallery-tab--video").addClass("spro-gallery-tab-links");
+        console.log ("i am video tab");
+        $('.js-video-gallery').toggleClass("display-none");        
+        $('.js-photo-gallery').addClass("display-none");
+    });
+    $(".js-spro-gallery-tab--photo").click(function(){
+        $(".js-spro-gallery-tab--photo").addClass("spro-gallery-tab-links");
+        $(".js-spro-gallery-tab--video").removeClass("spro-gallery-tab-links");
+        
+        $('.js-photo-gallery').toggleClass("display-none");
+        $('.js-video-gallery').addClass("display-none");
+        console.log ("i am photo tab");
+    });
+    // the spro photo and video gallery ends here
+}) ;

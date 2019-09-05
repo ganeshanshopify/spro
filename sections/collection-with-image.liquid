@@ -12,11 +12,11 @@
     <div class="featured-collection lazyload" {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: '1000x' }} [--lap]"{% endif %}>
       <header class="featured-collection__header lazyload" {% if section.settings.image %}data-bgset="{{ section.settings.image | img_url: '1000x' }} [--tablet]"{% endif %}>
         {%- if section.settings.title != blank -%}
-          <h2 class="featured-collection__title heading h2">{{ section.settings.title | escape }}</h2>
+          <h2 class="featured-collection__title featured-collection__title--font heading h2 heading--helvetica-bold">{{ section.settings.title | escape }}</h2>
         {%- endif -%}
 
         {%- if section.settings.content != blank -%}
-          <p class="featured-collection__text">{{ section.settings.content | escape | newline_to_br }}</p>
+          <p class="featured-collection__text heading--helvetica-regular">{{ section.settings.content | escape | newline_to_br }}</p>
         {%- endif -%}
 
         {%- if section.settings.button_text != blank -%}

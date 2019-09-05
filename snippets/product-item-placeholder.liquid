@@ -42,17 +42,17 @@ This create a placeholder for product item, and is used exclusively on home page
       {%- capture price_list -%}
         <div class="product-item__price-list price-list">
           {%- if on_sale -%}
-            <span class="price price--highlight price-color-custom" data-money-convertible>{{ random_price | money_without_trailing_zeros }}</span>
+            <span class="price price--highlight" data-money-convertible>{{ random_price | money_without_trailing_zeros }}</span>
             <span class="price price--compare" data-money-convertible>{{ random_compare_at_price | money_without_trailing_zeros }}</span>
           {%- else -%}
-            <span class="price price-color-custom" data-money-convertible>{{ random_price | money_without_trailing_zeros }}</span>
+            <span class="price" data-money-convertible>{{ random_price | money_without_trailing_zeros }}</span>
           {%- endif -%}
         </div>
       {%- endcapture -%}
 
       {%- capture vendor -%}
         {%- if settings.show_vendor -%}
-          <a class="product-item__vendor link" href="#">{{ 'home_page.onboarding.vendor_title' | t }}</a>
+          <a class="product-item__vendor product-item__vendor--font link heading--helvetica-regular" href="#">{{ 'home_page.onboarding.vendor_title' | t }}</a>
         {%- endif -%}
       {%- endcapture -%}
 
@@ -65,7 +65,7 @@ This create a placeholder for product item, and is used exclusively on home page
       {%- endif -%}
 
       <h2 class="product-item__title text--strong">
-        <a href="#" class="link">{{ 'home_page.onboarding.product_title' | t }}</a>
+        <a href="#" class="link heading--helvetica-bold product-item__subvendor--font">{{ 'home_page.onboarding.product_title' | t }}</a>
       </h2>
 
       {%- if settings.product_price_position == 'before_title' -%}
