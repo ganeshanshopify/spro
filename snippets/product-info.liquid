@@ -139,8 +139,8 @@
       {% comment %} <p>collections for this exists</p> {% endcomment %}
       <table class="product-table">
         <thead>
-          <td style="width: 20%;">Item #</td>
-          <td style="width: 35%">Item Name</td>
+          <!-- <td style="width: 20%;">Item #</td> -->
+          <td style="width: 55%">Item Name</td>
           <td style="width: 15%;">Starting at</td>
           <td style="width: 20%;">Quantity</td>
           <td style="width: 10%;">Add</td>
@@ -149,8 +149,8 @@
           {% for product in collections[product_handle].products%}
             {% assign current_variant = product.selected_or_first_available_variant %}
               <tr>
-                <td style="width: 20%;">{{ current_variant.sku }}</td>
-                <td style="width: 35%">{{product.title}}</td>
+                <!-- <td style="width: 20%;">{{ current_variant.sku }}</td> -->
+                <td style="width: 55%">{{product.title}}</td>
                 <td style="width: 15%;">{{product.price_min | money}}</td>
                 <td style="width: 20%;" class="js-product-quantity-wrapper"><input class="product-quantity" type="number" value="1"/></td>
                 <td style="width: 10%;" class="js-product-checkbox-wrapper"><input class="product-id js-product-id js-product-checkbox" product-id="{{current_variant.id}}" type="checkbox" data-inventory-quantity="{{current_variant.inventory_quantity}}"/></td>

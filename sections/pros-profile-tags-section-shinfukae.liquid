@@ -1,0 +1,22 @@
+{%- assign navigation_menu_handle = section.settings.navigation_menu_pros-profile -%}
+{%- assign navigation_menu_pros-profile = linklists[navigation_menu_handle] -%}
+
+<div class="pros-profile__tags-wrapper">
+    {% for link in navigation_menu_pros-profile.links %}
+        <a href="{{ link.url }}" class="pros-profile-tags">{{ link.title }}</a>
+    {% endfor %}
+</div>
+
+{% schema %}
+    {
+        "name": "Shin Fukae Tags",
+        "settings": [    
+        {
+            "type": "link_list",
+            "id": "navigation_menu_pros-profile",
+            "label": "Menu",
+            "default": "main-menu"
+        }
+        ]
+    }
+{% endschema %}
