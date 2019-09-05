@@ -12,7 +12,7 @@
   
       <div class="quick-links quick-links--memo">
         {%- for block in section.blocks -%}
-          <a {% if block.settings.link %} href="{{ block.settings.link }}"{% endif %} class="js-best-memo-video quick-links__link quick-links__link--memo" {{ block.shopify_attributes }}>
+          <a {% if block.settings.link %} href="{{ block.settings.link }}"{% endif %} class="js-best-memo-video quick-links__link quick-links__link--video quick-links__link--memo" {{ block.shopify_attributes }}>
             {%- if block.settings.image -%}
               {%- assign max_height_mobile = 40 -%}
               {%- assign max_height_desktop = 70 -%}
