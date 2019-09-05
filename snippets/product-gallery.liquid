@@ -1,7 +1,7 @@
 {%- if product.images.size > 0 -%}
   {%- assign show_thumbnails_if_one_image = true -%}
 
-  <div class="card">
+  <div class="card card--bg-color">
     <div class="card__section card__section--tight">
       <div class="product-gallery {% if show_thumbnails_if_one_image %}product-gallery--with-thumbnails{% endif %}">
         {%- assign selected_image = product.selected_variant.image | default: product.featured_image -%}
