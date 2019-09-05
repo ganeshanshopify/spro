@@ -1,6 +1,7 @@
+<h1 class="pros-list-section--heading-font heading--impact"> {{ section.settings.title }}</h1>
 <div class="row">
 {%- for block in section.blocks -%}
-        <div class="col-4">
+        <div class="col-3">
             <a {% if block.settings.link %}href="{{ block.settings.link }}"{% endif %} class="quick-links__link quick-links__link-pros quick-links__link-pros--width" {{ block.shopify_attributes }}>
             {%- if block.settings.image -%}
                 {%- assign max_height_mobile = 40 -%}
@@ -72,22 +73,12 @@
         "id": "title",
         "label": "Heading",
         "default": "Logo list"
-      },    
-      {
-        "type": "text",
-        "id": "link_title",
-        "label": "Link title"
-      },
-      {
-        "type": "url",
-        "id": "link",
-        "label": "Link"
       }
     ],
     "blocks": [
       {
         "type": "logo",
-        "name": "Logo",
+        "name": "Pro",
         "settings": [
           {
             "type": "image_picker",

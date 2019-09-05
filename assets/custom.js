@@ -223,4 +223,54 @@ $(document).ready(function() {
         // console.log($('#shopify-section-1565162611734 .flickity-page-dots').find('li').length);
         // console.log('true');
     }
+    // the spro photo and video gallery starts here
+    $('.js-photo-gallery').addClass("display-none");
+    $(".js-spro-gallery-tab--video").addClass("spro-gallery-tab-links");
+    $('.js-video-gallery').addClass("display-block");
+    $(".js-spro-gallery-tab--video").click(function(){
+        $(".js-spro-gallery-tab--photo").removeClass("spro-gallery-tab-links");
+        $(".js-spro-gallery-tab--video").addClass("spro-gallery-tab-links");
+        console.log ("i am video tab");
+        $('.js-video-gallery').toggleClass("display-none");        
+        $('.js-photo-gallery').addClass("display-none");
+    });
+    $(".js-spro-gallery-tab--photo").click(function(){
+        $(".js-spro-gallery-tab--photo").addClass("spro-gallery-tab-links");
+        $(".js-spro-gallery-tab--video").removeClass("spro-gallery-tab-links");
+        
+        $('.js-photo-gallery').toggleClass("display-none");
+        $('.js-video-gallery').addClass("display-none");
+        console.log ("i am photo tab");
+    });
+    // the spro photo and video gallery ends here
 }) ;
+// $(document).ready(function() {
+//     $('.js-photo-gallery').addClass("display-none");
+//     $('.js-video-gallery').addClass("display-block");
+//     $(".js-spro-gallery-tab--video").click(function(){
+//         console.log ("i am video tab");
+//         $('.js-video-gallery').toggleClass("display-none");
+//         $('.js-photo-gallery').addClass("display-none");
+//     });
+//     $(".js-spro-gallery-tab--photo").click(function(){
+//         $('.js-photo-gallery').toggleClass("display-none");
+//         $('.js-video-gallery').addClass("display-none");
+//         console.log ("i am photo tab");
+//     });
+// });
+
+// $(".ingredients-tabs span").on("click", function() {
+//     $(".ingredients-tabs span").removeClass("active");
+//     $(this).addClass("active");
+//     $(".js-ingredients-contents > div").removeClass("active");
+//     if($(".js-description-tab").hasClass("active")) {
+//         $(".ProductMeta__Description").addClass("active");
+//     }
+//     else if($(".js-ingredient-tab").hasClass("active")) {
+//         $(".Ingredient__Description").addClass("active");
+//     }
+// });
+// $(".js-ingredients-contents > div").on("click", function() {
+    
+
+// })
