@@ -1,0 +1,34 @@
+<div class="">
+        <!-- container -->
+        <div class="pros-profile">
+            <!-- pros-profile-image-section-disp-flex -->
+            <div class="pros-profile__wrapper">
+                <img class="pros-profile__wrapper--image" src="{{ section.settings.profile_image  | img_url: '1920x'}}"  />
+                <!-- {{ section.settings.profile_image }}  {{ 'Rectangle-260.png' | asset_url }}--> 
+            </div>
+            <a href="{{ section.settings.fb_link }}">
+              <div class="pros-profile__fb-logo-wrapper">
+                  
+                  <img class="pros-profile__fb-logo-padding" src=" {{ 'facebook-logo.svg' | asset_url }} " alt="facebook logo" />
+                  <p class="pros-profile__title">{{ page.title }}'s Facebook page</p>
+              </div>
+            </a>
+        </div>
+    </div>
+    {% schema %}
+      {
+        "name": "Bill Siemantel Profile",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "profile_image",
+            "label": "Image"
+          },
+          {
+            "type": "url",
+            "id": "fb_link",
+            "label": "Facebook Link"
+          }
+        ]
+      }
+      {% endschema %}

@@ -37,7 +37,8 @@
 
     {{ content_for_header }}
 
-    <link rel="stylesheet" href="{{ 'theme.scss.css' | asset_url }}">
+    {% comment %} <link rel="stylesheet" href="{{ 'theme.scss.css' | asset_url }}"> {% endcomment %}
+    {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
     {{ 'magnific-popup.css' | asset_url | stylesheet_tag }}
 
     <script>

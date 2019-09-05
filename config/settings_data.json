@@ -334,7 +334,7 @@
           "1555314133560-1": {
             "type": "item",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/spro2_1.jpg",
               "show_overlay": false,
               "overlay_opacity": 50,
               "stretch_image": true,
@@ -351,10 +351,10 @@
           "1555314133560-2": {
             "type": "item",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/spro3.jpg",
               "show_overlay": false,
               "overlay_opacity": 50,
-              "stretch_image": false,
+              "stretch_image": true,
               "background": "#e9e2dd",
               "text_color": "#000000",
               "title": "Power Bucktails",
@@ -632,7 +632,7 @@
           "1567089194219-0": {
             "type": "logo",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/spro5.jpg",
               "link": "https:\/\/www.youtube.com\/watch?v=V7fqkjtL-sc",
               "memovideo_text": "Spin John 80"
             }
@@ -640,7 +640,7 @@
           "1567089194219-1": {
             "type": "logo",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/spro41.jpg",
               "link": "https:\/\/www.youtube.com\/watch?v=ank7ra2RW5c",
               "memovideo_text": "Wameku Shad"
             }
@@ -648,7 +648,7 @@
           "1567089194219-2": {
             "type": "logo",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/spro6.jpg",
               "link": "https:\/\/www.youtube.com\/watch?v=qYyKCfTrgoU",
               "memovideo_text": "Bronzeye Spit Shad"
             }
@@ -656,7 +656,7 @@
           "1567089194219-3": {
             "type": "logo",
             "settings": {
-              "image": "",
+              "image": "shopify:\/\/shop_images\/spro7.jpg",
               "link": "https:\/\/www.youtube.com\/watch?v=on51tvea6NE",
               "memovideo_text": "Fat Papa 55"
             }
