@@ -5819,6 +5819,7 @@ $header-element-height: 44px;
   -webkit-transform: scale(1.01);
   transform: scale(1.01);
   z-index: 1;
+  color: #000;
 }
 
 .header__cart-toggle[aria-expanded="true"] .header__cart-count,
@@ -6088,7 +6089,9 @@ $header-element-height: 44px;
     margin: 0 auto;
   }
 }
-
+.search-bar__submit--color {
+  color: #000 !important;
+}
 /* Inner */
 
 .search-bar__inner {
@@ -9112,7 +9115,7 @@ $header-element-height: 44px;
   color: $accent-color;
 }
 .price-color-custom {
-  color: #D02525;
+  color: #D02525 !important;
 }
 .price--highlight {
   margin-right: 0.7em;
@@ -9526,7 +9529,7 @@ $header-element-height: 44px;
   flex-shrink: 0;
   background: $secondary-background;
   white-space: normal;
-
+  background: #fff !important;
   &::after {
     content: '';
     position: absolute;
@@ -11877,7 +11880,9 @@ $header-element-height: 44px;
       vertical-align: text-bottom;
     }
   }
-
+.announcement-bar__button--color {
+    color: #000 !important;
+}
   .announcement-bar__close-container {
     position: relative;
   }
@@ -12135,14 +12140,22 @@ $header-element-height: 44px;
   color: #fff;
   position: absolute;
   bottom: 83px;
-  left: 30px;
+  left: 45px;
   // transform: translate(-50%, -50%);
+  @media (max-width: 767px) {
+    bottom: 52px;
+    left: 15px;
+  }
 }
 .quick-links--memo-play {
   position: absolute;
-  bottom: 33px;
-  left: 30px;
+  bottom: 52px;
+  left: 45px;
   // transform: translate(-50%, -50%);
+  @media (max-width: 767px) {
+    bottom: 25px;
+    left: 15px;
+  }
 }
 .quick-links__link-pros { 
   box-shadow: unset;
@@ -13726,4 +13739,24 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .product-form__payment-container {
   margin-top: 40px;
+}
+.quick-links__link--video {
+  @media (min-width: 641px) {
+    padding: 15px;
+  }
+  
+}
+.quick-links--memo {
+  @media (min-width: 641px) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+ @media screen and (min-width: 641px) {
+  .header__logo-image--max-width {
+    max-width: 146px !important;
+  }
+}
+.layout__section--secondary .card {
+  background: #fff !important;
 }
